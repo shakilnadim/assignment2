@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: #111;
+}
+
+#converter, #series, #magic {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+#converter h2, #series h2, #magic h2 {
+  text-align: center;
+  color: #DC3545;
+}
+
+#converter form, #series form, #magic form {
+  background-color: #333;
+  width: 500px;
+  margin: 1rem auto;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#converter form div input[type=text], #converter form div input[type=submit], #converter form div select, #converter form div textarea, #series form div input[type=text], #series form div input[type=submit], #series form div select, #series form div textarea, #magic form div input[type=text], #magic form div input[type=submit], #magic form div select, #magic form div textarea {
+  padding: .35rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: auto;
+  border-radius: 5px;
+}
+
+#converter form div input[type=text], #series form div input[type=text], #magic form div input[type=text] {
+  height: 1.7rem;
+}
+
+#converter form div select, #converter form div input[type=submit], #converter form div input[type=button], #series form div select, #series form div input[type=submit], #series form div input[type=button], #magic form div select, #magic form div input[type=submit], #magic form div input[type=button] {
+  height: 2.6rem;
+}
+
+#converter form div input[type=submit], #converter form div input[type=button], #series form div input[type=submit], #series form div input[type=button], #magic form div input[type=submit], #magic form div input[type=button] {
+  -webkit-transition: .5s;
+  transition: .5s;
+  border: 1px solid #DC3545;
+  background-color: #DC3545;
+}
+
+#converter form div input[type=submit]:hover, #converter form div input[type=button]:hover, #series form div input[type=submit]:hover, #series form div input[type=button]:hover, #magic form div input[type=submit]:hover, #magic form div input[type=button]:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+}
+
+#converter form p, #series form p, #magic form p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+#converter form input[type=text] {
+  width: 100px;
+}
+
+#magic input[type=button] {
+  padding: .35rem;
+  font-size: .9rem;
+  font-weight: 500;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+#fortunes {
+  margin-bottom: 2rem;
+}
+
+#fortunes .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#fortunes .container .quote {
+  background-color: #DC3545;
+  color: #fff;
+  border: 2px solid #28A745;
+  padding: 1rem;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#fortunes .container .color-select {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-left: 10px;
+}
+
+#fortunes .container .color-select .red, #fortunes .container .color-select .green, #fortunes .container .color-select .blue, #fortunes .container .color-select .yellow {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#fortunes .container .color-select .red {
+  background-color: #ff0000;
+  -webkit-box-shadow: 2px 1px 24px 5px rgba(255, 0, 0, 0.438);
+          box-shadow: 2px 1px 24px 5px rgba(255, 0, 0, 0.438);
+}
+
+#fortunes .container .color-select .green {
+  background-color: green;
+  -webkit-box-shadow: 2px 1px 24px 5px rgba(0, 128, 0, 0.438);
+          box-shadow: 2px 1px 24px 5px rgba(0, 128, 0, 0.438);
+}
+
+#fortunes .container .color-select .blue {
+  background-color: blue;
+  -webkit-box-shadow: 2px 1px 24px 5px rgba(0, 0, 255, 0.438);
+          box-shadow: 2px 1px 24px 5px rgba(0, 0, 255, 0.438);
+}
+
+#fortunes .container .color-select .yellow {
+  background-color: yellow;
+  -webkit-box-shadow: 2px 1px 24px 5px rgba(255, 255, 0, 0.438);
+          box-shadow: 2px 1px 24px 5px rgba(255, 255, 0, 0.438);
+}
+/*# sourceMappingURL=style.css.map */
