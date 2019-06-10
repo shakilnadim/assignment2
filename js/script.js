@@ -122,7 +122,6 @@ function stringToArr(){
         if(isNaN(seriesArr[i])){
             seriesArr.splice(i,1);
             i--;
-            console.log(i);
         }
     }
     console.log(seriesArr);
