@@ -118,16 +118,14 @@ function stringToArr(){
     const series = document.querySelector('#series input[type=text]');
     const seriesArr = series.value.split(',');
     for(let i=0;i<seriesArr.length; i++){
-        if(seriesArr[i]==''){
-            seriesArr.splice(i);
+        seriesArr[i] = parseFloat(seriesArr[i]);
+        if(isNaN(seriesArr[i])){
+            seriesArr.splice(i,1);
             i--;
-        }else{
-            seriesArr[i] = parseFloat(seriesArr[i]);
-            if(isNaN(seriesArr[i])){
-                seriesArr.splice(i);
-            }
+            console.log(i);
         }
     }
+    console.log(seriesArr);
     return seriesArr;
 }
 
