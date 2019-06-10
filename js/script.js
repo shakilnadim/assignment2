@@ -2,6 +2,7 @@ const color = document.querySelector('.color-select');
 const quoteTxt = document.querySelector('.quote');
 const converterForm = document.querySelector('#converter form');
 const seriesForm = document.querySelector('#series form');
+const seriesFormInput = document.querySelector('#series form input[type=text]');
 const magicEditor = document.querySelector('#magic form');
 const magicTxt = document.querySelector('#magic textarea');
 
@@ -23,13 +24,21 @@ converterForm.addEventListener('submit', function(e){
 });
 
 // event listener for number series
-seriesForm.addEventListener('submit', function(e){
-    e.preventDefault();
-    const seriesArr = stringToArr();
-    findMax(seriesArr);
-    findMin(seriesArr);
-    sumAvg(seriesArr);
-    reverseArr(seriesArr);
+seriesFormInput.addEventListener('keyup', function(e){
+    if(e.target.value!=''){
+        const seriesArr = stringToArr();
+        findMax(seriesArr);
+        findMin(seriesArr);
+        sumAvg(seriesArr);
+        reverseArr(seriesArr);
+    }else{
+        maxP.textContent = `Max = 0`;
+        minP.textContent = `Min = 0`;
+        sumP.textContent = `Sum = 0`;
+        avgP.textContent = `Average  = 0`;
+        reverseP.textContent = `Reverse Order = `;
+    }
+    
 });
 
 // event listener for magic editor buttons
@@ -109,7 +118,15 @@ function stringToArr(){
     const series = document.querySelector('#series input[type=text]');
     const seriesArr = series.value.split(',');
     for(let i=0;i<seriesArr.length; i++){
-        seriesArr[i] = parseFloat(seriesArr[i]);
+        if(seriesArr[i]==''){
+            seriesArr.splice(i);
+            i--;
+        }else{
+            seriesArr[i] = parseFloat(seriesArr[i]);
+            if(isNaN(seriesArr[i])){
+                seriesArr.splice(i);
+            }
+        }
     }
     return seriesArr;
 }
