@@ -7,4 +7,4 @@ The functionalities are
 * Random quote generator
 
 
-Visit the [Live Site](https://shakilnadim.github.io/assignment2/)
+### Visit the [Live Site](https://shakilnadim.github.io/assignment2/)
